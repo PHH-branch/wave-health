@@ -1,0 +1,125 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Doctor Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="circleBase type2 circle1"></div>
+  <div class="circleBase type1"></div>
+  <div class="circleBase type2 circle2"></div>
+
+  <ion-label class="welcomeMessage">
+    <ion-text color="light">Hello,</ion-text>
+    <ion-text color="light"><p>Sign Up!</p></ion-text>
+  </ion-label>
+
+  <ion-icon name="arrow-back-outline" color="light" class="backButton" routerLink="/dr-login"></ion-icon>
+
+ <form [formGroup]="signupForm">
+    <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-input formControlName="username" placeholder="Username">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
+          <p class="error">* Please enter username</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-icon name="mail-outline" slot="end" color="medium">
+          </ion-icon>
+          <ion-input formControlName="email" placeholder="Email">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+          <p class="error">* Please enter proper email address</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-input formControlName="phone" placeholder="Phone">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched">
+          <p class="error">* Phone must have 10 numbers</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-input formControlName="sama" placeholder="Sama number">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('sama').valid && signupForm.get('sama').touched">
+          <p class="error">* Sama must have 10 numbers</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-input formControlName="dob" placeholder="Date of Birth" type="date">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('dob').valid && signupForm.get('dob').touched">
+          <p class="error">* Date is required</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-input formControlName="nrc" placeholder="NRC number">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('nrc').valid && signupForm.get('nrc').touched">
+          <p class="error">* NRC number is required</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-item class="ion-margin-vertical">
+          <ion-select label="Speciality" formControlName="speciality" >
+            <ion-select-option value="apple">Apple</ion-select-option>
+            <ion-select-option value="banana">Banana</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-text class="ion-text-left" color="danger" *ngIf="!signupForm.get('speciality').valid && signupForm.get('speciality').touched">
+          <p class="error">* Choose one</p>
+        </ion-text>
+      </div>
+
+      <div>
+        <ion-row class="ion-margin-vertical">
+          <ion-col size="12" class="alignItems">
+            <div align="left">
+              <ion-checkbox></ion-checkbox>
+              <ion-note>I accept policy and terms</ion-note>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div>
+        <ion-button color="warning" shape="round" (click)="onSubmit()">
+          Sign Up
+        </ion-button>
+      </div>
+    </ion-list>
+
+  </form>
+</ion-content>
+
+
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dr-signup</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->

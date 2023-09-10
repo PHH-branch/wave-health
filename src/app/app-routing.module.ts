@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'dr-login',
     loadChildren: () => import('./pages/dr-login/dr-login.module').then( m => m.DrLoginPageModule)
-  }
+  },
+  {
+    path: 'dr-signup',
+    loadChildren: () => import('./pages/dr-signup/dr-signup.module').then( m => m.DrSignupPageModule)
+  },
 ];
 
 @NgModule({

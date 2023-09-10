@@ -9,7 +9,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class DrLoginPage implements OnInit {
   form : FormGroup;
-  isTypePassword : boolean = true;
   isLogin = false;
 
   constructor() {
@@ -35,10 +34,8 @@ export class DrLoginPage implements OnInit {
   ngOnInit() {
   }
 
-  onChange(){
-    this.isTypePassword = !this.isTypePassword;
-  }
-
+  onChange(){}
+  
   onSubmit(){
     if(!this.form.valid) return;
     console.log(this.form.value);
