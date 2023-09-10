@@ -1,0 +1,7 @@
+{
+  "name": "wave-health",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
