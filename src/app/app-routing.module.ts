@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'chat-list',
+    redirectTo: 'otp',
     pathMatch: 'full'
   },
   {
@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'dr-signup',
     loadChildren: () => import('./pages/dr-signup/dr-signup.module').then( m => m.DrSignupPageModule)
+  },
+  {
+    path: 'otp',
+    loadChildren: () => import('./pages/otp/otp.module').then( m => m.OtpPageModule)
   },
 ];
 

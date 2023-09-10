@@ -1,0 +1,17 @@
+
+
+  .otp-form{
+    transform: translateY(20vh);
+
+    width: 100%;
+    text-align: center;
+    
+    ion-button{
+      width: 30vh;
+      margin: auto;
+    }
+    
+    .otp-item {
+      margin-bottom: 5vh;
+    }
+  }

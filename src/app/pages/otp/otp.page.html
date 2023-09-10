@@ -1,0 +1,27 @@
+
+<ion-content [fullscreen]="true">
+  <div class="circleBase type2 circle1"></div>
+  <div class="circleBase type1"></div>
+  <div class="circleBase type2 circle2"></div>
+
+  <ion-label class="welcomeMessage">
+    <ion-text color="light">Welcome back,</ion-text>
+    <ion-text color="light"><p>Log In!</p></ion-text>
+  </ion-label>
+
+  <form class="otp-form">
+    <div class="otp-item">
+      <ion-title>OTP code</ion-title>
+    </div>
+
+    <div class="otp-item">
+      <ng-otp-input (onInputChange)="onOtpChange($event)" 
+      [config]="{length:5,allowNumbersOnly:true}"></ng-otp-input>
+    </div>
+    <div class="otp-item">
+      <ion-button color="warning" shape="round" (click)="onSubmit()">
+        Log In
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
