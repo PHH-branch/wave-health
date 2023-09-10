@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dr-signup',
@@ -11,7 +12,7 @@ export class DrSignupPage implements OnInit {
   isTypePassword :boolean = true;
   isLoading :boolean = false;
 
-  constructor() {
+  constructor(private router:Router) {
     this.initForm();
   }
 
@@ -64,5 +65,6 @@ export class DrSignupPage implements OnInit {
   onSubmit(){
     if(!this.signupForm.valid) return;
     console.log(this.signupForm.value);
+    this.router.navigate(['/otp'])
   }
 }

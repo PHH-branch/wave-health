@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class DrLoginPage implements OnInit {
   form : FormGroup;
   isLogin = false;
 
-  constructor() {
+  constructor(private router: Router) {
     this.initForm();
   }
 
@@ -31,13 +32,13 @@ export class DrLoginPage implements OnInit {
     })
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onChange(){}
   
   onSubmit(){
     if(!this.form.valid) return;
     console.log(this.form.value);
+    this.router.navigate(['/otp'])
   }
 }

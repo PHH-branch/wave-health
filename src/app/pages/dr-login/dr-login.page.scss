@@ -12,10 +12,12 @@
   
   ion-list{
     background: transparent;
-    transform: translateY(20vh);
+    transform: translateY(10vh);
     ion-item{
       border: 1px solid var(--ion-color-medium);
       border-radius: 10px;
+    }
+    div {
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
