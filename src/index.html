@@ -20,6 +20,20 @@
 </head>
 
 <body>
+  <!-- Add WaveMoney JSSDK Library -->
+  <script src="{to-be-shared-later}"></script>
+  <script>
+// Wait for the DOM to be ready
+     document.addEventListener('DOMContentLoaded', function () {
+      try {
+        const sdk = new WaveJsSDK();
+        sdk.init({ clientId: 'wave-money' });
+      } catch (e) {
+        console.log(e);
+      }
+    });
+  </script>
+  <!-- Your other body content here -->
   <app-root></app-root>
 </body>
 

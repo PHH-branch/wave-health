@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>chatList</ion-title>
+    <ion-thumbnail slot="end">
+      <img alt="Missing image" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" onerror="this.onerror=null;this.src='assets/images/thumbnail.svg';" style="border-radius: 50%; max-height: 70%; max-width: 70%;margin-right:10px;margin-top:7px"/>
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Video Games</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of msgList" (click)= "getChat(item)" [detail]="true">
+      <ion-thumbnail slot="start">
+        <img
+          alt="Missing image"
+          [src]="item?.photo" onerror="this.onerror=null;this.src='assets/images/thumbnail.svg';"
+        />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{item?.name}}</h2>
+        <p>{{item?.msg}}</p>
+      </ion-label>
+<ion-text slot="end" color="medium">10:00 pm</ion-text>
+    </ion-item>
+
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Video Games</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of msgList" (click)= "getChat(item)" [detail]="true">
+      <ion-thumbnail slot="start">
+        <img
+          alt="Missing image"
+          [src]="item?.photo" onerror="this.onerror=null;this.src='assets/images/thumbnail.svg';"
+        />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{item?.name}}</h2>
+        <p>{{item?.msg}}</p>
+      </ion-label>
+<ion-text slot="end" color="medium">10:00 pm</ion-text>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
