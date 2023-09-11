@@ -1,0 +1,45 @@
+
+<ion-content class="pin-container" [fullscreen]="true">
+    <div>
+        <ion-icon size="large" name="lock-closed-outline"></ion-icon>
+        <ion-label>Enter PIN</ion-label>
+    </div>
+
+    <div>
+        <code-input
+            [isCodeHidden]="true"
+            [codeLength]="codeLength"
+            [code]="code"
+            [initialFocusField]="0"
+            (codeChanged)="onCodeChanged($event)"
+            (codeCompleted)="onCodeCompleted($event)">
+        </code-input>
+    </div>
+
+    <div>
+        <ion-grid class="pin-pad">
+            <ion-row>
+                <ion-col (click)="onKey('1')">1</ion-col>
+                <ion-col (click)="onKey('2')">2</ion-col>
+                <ion-col (click)="onKey('3')">3</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col (click)="onKey('4')">4</ion-col>
+                <ion-col (click)="onKey('5')">5</ion-col>
+                <ion-col (click)="onKey('6')">6</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col (click)="onKey('7')">7</ion-col>
+                <ion-col (click)="onKey('8')">8</ion-col>
+                <ion-col (click)="onKey('9')">9</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col></ion-col>
+                <ion-col (click)="onKey('0')">0</ion-col>
+                <ion-col  (click)="onDelete()">
+                    <ion-icon size="large" name="backspace"></ion-icon>            </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+</ion-content>

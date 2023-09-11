@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pin',
+    redirectTo: 'pin-v2',
     pathMatch: 'full'
   },
   {
@@ -35,9 +35,13 @@ const routes: Routes = [
     path: 'otp',
     loadChildren: () => import('./pages/otp/otp.module').then( m => m.OtpPageModule)
   },
+  // {
+  //   path: 'pin',
+  //   loadChildren: () => import('./pages/pin/pin.module').then( m => m.PinPageModule)
+  // },
   {
-    path: 'pin',
-    loadChildren: () => import('./pages/pin/pin.module').then( m => m.PinPageModule)
+    path: 'pin-v2',
+    loadChildren: () => import('./pages/pin-v2/pin-v2.module').then( m => m.PinV2PageModule)
   },
 ];
 
