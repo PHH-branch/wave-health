@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pin-v2',
+    redirectTo: 'chat-list',
     pathMatch: 'full'
   },
   {
