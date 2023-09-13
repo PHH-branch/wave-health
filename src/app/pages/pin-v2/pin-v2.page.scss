@@ -1,73 +1,39 @@
-
 .pin-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-    color: white;
-
-    ion-grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    div {
-        margin: 5vh auto;
-        max-width: 400px;
-    }
-
-    ion-icon {
-        display: flex;
-        margin: auto;
-        margin-bottom: 2vh;
-        width: 100%;
-    }
-
-    ion-label {
-        display: flex;
-        width: 10%0;
-        margin: auto;
-        text-align: center;
-    }
-
-    .pin-pad {
-        display: flex;
-        flex-direction: column;
-    }
+  display: flex;
 }
 
-// .pin-container {
-//     display: flex;
-// }
+code-input {
+  color: #333;
+  width: 250px;
+  margin: 10vh auto 10vh;
+}
 
-// code-input {
-//     color: white;
-//     width: 400px;
-//     margin: 10vh auto 10vh;
-// }
+.pin-pad {
+  margin: 10vh auto 10vh;
+  // color: #fff;
+  text-align: center;
+  min-width: 150px;
+  max-width: 250px;
+  min-height: 20px;
+  text-align: center;
+  bottom: 0;
+  border: #333;
+  border-radius: 20px;
 
-// .pin-pad {
-//     margin: 10vh auto 10vh;
-//     color: #fff;
-//     text-align: center;
-//     min-width: 400px;
-//     max-width: 500px;
-//     text-align: center;
-//     bottom: 0;
-    
-//     ion-row {
-//         margin-bottom: 2vh;
-//     }
-    
-//     ion-col {
-//         width: calc(100%/3);
-//         border: solid 1px #fff;
-//         padding: 1px 2px;
-//         // width: 66px;
-//         height: 70px;
-//         margin: 0.5vh;
-//     }
-// }
+  ion-row {
+      margin-bottom: 2vh;
+
+  }
+
+  ion-col {
+      width: calc(100%/3);
+      border: solid 1px #c4bcbc;
+      padding: 1px 2px;
+      // width: 66px;
+      height: 60px;
+      margin: 0.5vh;
+      font-size: 20px;
+      padding-top:20px;
+  }
+}
+

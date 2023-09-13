@@ -1,12 +1,21 @@
-
-<ion-content class="pin-container" [fullscreen]="true">
-    <div>
-        <ion-icon size="large" name="lock-closed-outline"></ion-icon>
-        <ion-label>Enter PIN</ion-label>
+<ion-header [translucent]="true">
+    <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-back-button [defaultHref]="'/'"></ion-back-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="pin-container" [fullscreen]="true">
+    <div style="padding: 30px;padding-bottom:10px;text-align: -webkit-center;">
+        <ion-icon size="large" name="lock-closed-outline" color="secondry"></ion-icon>
+        <p style="margin-top: 10px;">Enter PIN</p>
+        <p style="margin-top: 10px;font-size: 13px;color: #7f7b7b;">Please enter your pin to proceed</p>
     </div>
-
+  
     <div>
-        <code-input
+        <code-input style="margin-top: 0px;margin-bottom: 0px;"
             [isCodeHidden]="true"
             [codeLength]="codeLength"
             [code]="code"
@@ -15,6 +24,8 @@
             (codeCompleted)="onCodeCompleted($event)">
         </code-input>
     </div>
+  
+    <ion-loading style="--backdrop-opacity: 0.3" [isOpen]="isLoading" message="Processing" spinner="crescent"></ion-loading>
 
     <div>
         <ion-grid class="pin-pad">
@@ -41,5 +52,7 @@
             </ion-row>
         </ion-grid>
     </div>
-
-</ion-content>
+  
+  </ion-content>
+  
+  

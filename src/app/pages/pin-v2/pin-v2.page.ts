@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class PinV2Page implements OnInit {
   code: string
   codeLength
+  isLoading: boolean = false
 
   constructor() { 
     this.code = ''
-    this.codeLength = 5
+    this.codeLength = 4
   }
 
   ngOnInit() {
@@ -22,6 +23,7 @@ export class PinV2Page implements OnInit {
   }
 
   onCodeCompleted(code: string) {
+    this.isLoading = true
     console.log(code);
     
   }
