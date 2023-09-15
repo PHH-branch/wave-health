@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pin-v2',
+    redirectTo: 'camera',
     pathMatch: 'full'
   },
   {
@@ -43,6 +43,11 @@ const routes: Routes = [
     path: 'pin-v2',
     loadChildren: () => import('./pages/pin-v2/pin-v2.module').then( m => m.PinV2PageModule)
   },
+  {
+    path: 'camera',
+    loadChildren: () => import('./pages/camera/camera.module').then( m => m.CameraPageModule)
+  },
+
 ];
 
 @NgModule({
