@@ -21,10 +21,45 @@
 
 <body>
   <!-- Add WaveMoney JSSDK Library -->
-  <script src="{to-be-shared-later}"></script>
+  <script src="src/wavemoney.min.js"></script>
   <script>
-// Wait for the DOM to be ready
-     document.addEventListener('DOMContentLoaded', function () {
+    // Wait for the DOM to be ready
+    document.addEventListener('DOMContentLoaded', function () {
+      class WaveJsSDK {
+        constructor() {
+          this.locationModule = {
+            getCurrentPosition: function () {
+              return new Promise((resolve, reject) => {
+                // for success response
+                resolve({
+                    response: {
+                        data: {
+                            latitude: 37.7749,
+                            longitude: -122.4194,
+                        },
+                    },
+                });
+
+                // for failed response
+                reject({
+                  response: {
+                    error: {
+                      code: 'WM-OTHER-001',
+                      message: 'An error occurred!',
+                    },
+                  },
+                });
+              });
+            },
+            
+          };
+        }
+
+        init(args) {
+          window.WaveJsSDK = this;
+        }
+      }
+      
       try {
         const sdk = new WaveJsSDK();
         sdk.init({ clientId: 'wave-money' });

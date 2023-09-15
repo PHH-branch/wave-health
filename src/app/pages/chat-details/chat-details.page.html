@@ -27,6 +27,7 @@
       placeholder="Send message here!"
       class="ion-text-center"
       [(ngModel)]="message"
+      (keydown.Enter)="onEnterPressed($event)"
     >
     </ion-textarea>
 
@@ -43,6 +44,19 @@
         <ion-spinner name="crescent" color="white"></ion-spinner>
       </ion-fab-button>
     </ion-buttons>
+
+    <!-- <ion-fab vertical="bottom" horizontal="center" slot="end"> -->
+    <ion-buttons slot="start">
+
+      <!-- <ion-fab-button (click)="addPhotoToGallery()" size="small" id="open-action-sheet"> -->
+      <ion-fab-button (click)="presentActionSheet()" size="small" id="open-action-sheet">
+        <ion-icon size="" name="add-outline" size="small"></ion-icon>
+      </ion-fab-button>
+
+      <!-- <ion-action-sheet trigger="open-action-sheet" header="Actions" [buttons]="actionSheetButtons"></ion-action-sheet> -->
+
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-footer>
 

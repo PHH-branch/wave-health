@@ -1,8 +1,12 @@
 <ion-item lines="none" [class]="chat?.sender !== current_user_id ? 'sender' : 'user'">
   <ion-label [slot]="chat?.sender === current_user_id ? 'end' : 'start'" class="ion-text-wrap">
-    <ion-text>
+    
+    <ion-text *ngIf="!chat?.message.startsWith('data:image'); else b64">
       {{chat?.message}}
     </ion-text>
+    <ng-template #b64>
+      <ion-img [src]="chat?.message"></ion-img>
+    </ng-template>
     <ion-note>
       <!-- <small>
         {{(chat?.createdAt)?.toDate() | date: 'HH:mm'}}

@@ -17,7 +17,7 @@ export class ChatService {
     return this.chatMessages.valueChanges();
   }
 
-  sendMessage(message: string) {
-    this.chatMessages.push({ message });
+  sendMessage(message: string | Blob) {
+    return this.chatMessages.push({ message });
   }  
 }
